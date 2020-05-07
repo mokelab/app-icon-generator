@@ -24,7 +24,7 @@ export default class Application implements IApplication {
 
         this.drawer = drawerFactory(this);
         this.appBar = appBarFactory(this.drawer);
-        this.appBar.setHasDrawer(true);
+        this.appBar.setHasDrawer(false);
     }
 
     start() {

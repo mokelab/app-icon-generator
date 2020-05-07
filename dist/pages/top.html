@@ -1,8 +1,17 @@
-<h1>Top</h1>
+<div class="top">
+  <div class="mdc-card">
+      <input type="file" value="{{files}}"><br/>
+      <Button on-click="submit" accent>生成</Button>
+  </div>
 
-<button
-  as-mdl
-  class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised mdl-button--accent"
->
-  OK
-</button>
+  {{#if generated}}
+  <div class="mdc-card">
+    {{#sizes}}
+    <div>
+        <canvas id="canvas{{.}}" name="a.png" style="width: {{.}}px; height: {{.}}px;"></canvas>
+        <a id="download{{.}}">ダウンロード</a>
+    </div>
+    {{/}}
+  </div>
+  {{/if}}
+</div>

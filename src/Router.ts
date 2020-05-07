@@ -8,9 +8,8 @@ import LoginPage from "./pages/LoginPage";
 
 export default class Router implements IRouter {
     constructor(app: IApplication) {
-        page("/", () => {
-            //this.showPage(new TopPage(app));
-            this.showPage(new LoginPage(app));
+        page("*", () => {
+            this.showPage(new TopPage(app));
         });
     }
 
